@@ -1,0 +1,17 @@
+设计师列表
+    资源定位：
+        getDesignerList
+    交互方式：
+        get
+    请求参数：
+        //sort:1  最新发布
+        {
+            sort:"排序状态"
+        }
+    返回参数
+        {
+            designer_id:"设计师id",
+            designer_name:"设计师姓名",
+            degree_star:"星级"
+
+        }
