@@ -1,0 +1,35 @@
+钱包概述
+    资源定位：
+        getWalletSummary
+    请求参数：
+        {
+            user_id:"用户id"
+        }
+    返回参数：
+        {
+            surplus:"余额",
+            income_recently:"最近30天收入"
+            income_amount:"累计收入"    
+        }
+
+钱包详情
+    资源定位：
+        getWalletDetail
+    请求参数：
+        {
+            user_id:"用户id"
+        }
+    返回参数：
+        {
+            record:[
+                {
+                    income:“收入”,
+                    income_type:"收入类型",
+                    income_date:"收入日期",
+                }
+            ] 
+            current_month_sum:{
+                revenue:"当月收入",
+                cash_ithdraw:"当月提现"
+            }
+        }

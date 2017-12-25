@@ -29,16 +29,13 @@
 
 2.雇主任务大厅订单列表
     资源定位：
-        getOrderList
+        getOrderListEemployerHall
     交互方式：
         get
     请求参数：
-        //competite:0  抢单中
         //sort:1  最新发布
-
         {
             project_type:"项目类型(设计师注册时设计类型)"
-            competite:"抢单状态",
             sort:"排序状态"
         }
     返回参数
@@ -46,14 +43,12 @@
 
 3.首页订单列表
     资源定位：
-        getOrderList
+        getOrderListIndex
     交互方式：
         get
     请求参数：
-        //competite:0抢单中
         //sort:1  最新发布
         {
-            competite:"抢单状态",
             sort:"排序状态"
         }
     返回参数：
@@ -103,7 +98,7 @@
 
 5.雇主订单列表
     资源定位：
-        getOrderList
+        getOrderListEmployer
     交互方式：
         get
     请求参数：
@@ -149,7 +144,7 @@
 
 7.设计师订单列表
     资源定位：
-        getOrderList
+        getOrderListDesigner
     交互方式：
         get
     请求参数：
@@ -173,7 +168,7 @@
 
 8.选择设计师列表
     资源定位：
-        getListOfDesigner
+        getListOfDesignerChoosing
     交互方式：
         get
     请求参数：
