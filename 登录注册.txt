@@ -1,0 +1,55 @@
+注册
+    资源定位：
+        register
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            user_name:"用户姓名"
+            mobile_phone:"手机号",
+            identifying_code:"验证码",
+            password:"密码",
+            passwordonfirm："确认密码"
+        }
+    返回参数：
+        {
+            code:"状态值",
+            msg:"返回消息"
+        }
+
+快速登录
+    资源定位：
+        login_fast
+    交互方式：
+        get
+    请求参数：
+        {
+            user_id:"用户id",
+            mobile_phone:"手机号",
+            identifying_code:"验证码",
+        }
+    返回参数：
+         {
+            user_id:"用户id",
+            user_name:"用户姓名"
+            designer_type:"设计师类型"
+        }
+
+账号登录
+    资源定位：
+        login
+    交互方式：
+        get
+    请求参数：
+        {
+            user_id:"用户id",
+            user_account:"用户账号",
+            password:"用户密码"
+        }
+    返回参数：
+         {
+            user_id:"用户id",
+            user_name:"用户姓名"
+            designer_type:"设计师类型"
+        }
