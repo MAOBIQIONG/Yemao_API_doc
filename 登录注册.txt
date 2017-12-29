@@ -6,9 +6,10 @@
     请求参数：
         {
             user_id:"用户id",
-            user_name:"用户姓名"
+            nickname:"用户姓名"
             mobile_phone:"手机号",
             password:"密码",
+            verifying_code:"验证码"
         }
     返回参数：
         {
