@@ -93,13 +93,6 @@
             working_year:"工作时长",
             hourly_wage:"时薪",
             profile:"简介",
-            honor_name:"荣誉名称",
-            honor_time:"获取荣誉时间",
-            honor_profle:"荣誉简介",
-            honor_picture:"荣誉时间",
-            designs_name:"作品名称",
-            desings_time:"作品时间",
-            designs_picture:"作品图片"
             order_case:[
                 {
                     case_id:"案例id"
