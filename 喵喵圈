@@ -303,6 +303,109 @@
             msg:"返回消息"
         }
 
+喵喵人才
+    资源定位：
+        getJobHunterList
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            list:[
+                {
+                    user_id:"用户id"
+                    user_name："用户姓名",   
+                    university:"毕业院校",
+                    design_type:"设计类型",
+                    degree:"学历",
+                    working_year:"工作时长",    
+                    city:"所在城市"
+                }
+            ],
+            pagination: {
+                page: "当前页码",
+                limit: "每页数据量",
+                total: "总页数"
+            }
+        }
+
+喵喵人才
+    资源定位：
+        getJobHunterList
+    交互方式：
+        get
+    请求参数：
+        {
+            user_id
+        }
+    返回参数：
+       {
+            user_id:"用户id"
+            user_name："用户姓名",
+            sex:"性别",
+            birthday:"出生年月",
+            university:"毕业院校",
+            design_type:"设计类型",
+            degree:"学历",
+            working_year:"工作时长",
+            email:"邮箱",
+            city:"所在城市",
+            work_experience:[
+                {
+                    company_name:"企业名称",
+                    job:"职位",
+                    time_slot:"在职时间段",
+                    job_content:"工作内容"
+                },
+            ]
+            expected_work:{
+                expected_job:"预期职位",
+                expected_salary:"预期薪资",
+                expected_city:"预期城市",
+                postscript:"补充说明"
+            },
+            product_image:["作品图片"]
+        }
+
+发布简历    
+    资源定位：
+        releaseAnCV 
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id"
+            user_name："用户姓名",
+            sex:"性别",
+            birthday:"出生年月",
+            university:"毕业院校",
+            design_type:"设计类型",
+            degree:"学历",
+            working_year:"工作时长",
+            email:"邮箱",
+            city:"所在城市",
+            work_experience:[
+                {
+                    company_name:"企业名称",
+                    job:"职位",
+                    time_slot:"在职时间段",
+                    job_content:"工作内容"
+                },
+            ]
+            expected_work:{
+                expected_job:"预期职位",
+                expected_salary:"预期薪资",
+                expected_city:"预期城市",
+                postscript:"补充说明"
+            },
+            product_image:["作品图片"]
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }   
 
 
 
