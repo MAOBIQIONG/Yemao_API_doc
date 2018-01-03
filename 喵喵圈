@@ -171,7 +171,12 @@
                     upvote_num:"赞成数",
                     review_num:"评论数"
                 }
-            ]
+            ],
+            pagination: {
+                page: "当前页码",
+                limit: "每页数据量",
+                total: "总页数"
+            }
         }
 
 学堂详情
@@ -408,5 +413,86 @@
         }   
 
 
+校友会
+    资源定位：
+        getUniversityList
+    交互方式：
+        get
+    请求参数：
+        {
+            user_id:"用户id"(用来判定是否加入某校友会)
+        }
+    返回参数：
+        {
+            list:[
+                {
+                    university:"学校名字",
+                    university_logo:"学校logo",
+                    university_profile:"学校简介"
+                }
+            ],
+            pagination: {
+                page: "当前页码",
+                limit: "每页数据量",
+                total: "总页数"
+            }
+        }
+
+学校详情
+    资源定位：
+        getUniversityList
+    交互方式：
+        get
+    请求参数：
+        {
+            university_id:"学校id"
+        }
+    返回参数：
+        {
+            university:"学校名字",
+            university_logo:"学校logo",
+            university_profile:"学校简介",
+            administrators:"管理员（创建者）",
+            member_list:[
+                {
+                    avatar:"头像",
+                    user_name:"成员名称",
+                    authenticating_state:"认证状态"
+                }
+            ]
+        }
+
+加入学校
+    资源定位：
+        joinTheUniversity
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            university_id:"学校id"
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }
 
 
+创建学校
+    资源定位：
+        createUniversity 
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            university_name:"学校名称",
+            university_city:"学校所在城市",
+            university_profile:"学校简介"
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }    
