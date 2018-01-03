@@ -1,0 +1,309 @@
+喵喵圈首页
+    资源定位：
+        getMiaoCircle
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+    {
+        list:[
+            {
+                info_id:"信息id"
+                user_id:"用户id"
+                user_name："用户姓名",
+                authenticating_state:"用户认证状态",
+                info_date:"信息发布时间",
+                info_pictures:["信息图片"],
+                info_describe:"信息描述",
+                upvote_num:"点赞数",
+                msg_num:"消息数"
+            }
+        ],
+        pagination: {
+            page: "当前页码",
+            limit: "每页数据量",
+            total: "总页数"
+        }
+    }
+
+发布信息
+    资源定位：
+        releaseInformation
+    交互方式：
+        post
+    请求参数：
+        {
+            info_pictures:["信息图片"],
+            info_describe:"信息描述"
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }
+    
+点赞
+    资源定位：
+        upvote
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            info_id:"信息id"
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }
+
+
+评论
+    资源定位：
+        review
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            info_id:"信息id",
+            content:"评论内容"
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"  
+        }
+
+信息详情
+    资源定位：
+        getCircleInfoDetial
+    交互方式：
+        get
+    请求参数：
+        {
+            info_id:"信息id"
+        }
+    返回参数：
+        {
+            info_id:"信息id"
+            user_id:"用户id"
+            user_name："用户姓名",
+            authenticating_state:"用户认证状态",
+            info_date:"信息发布时间",
+            info_pictures:["信息图片"],
+            info_describe:"信息描述",
+            review:[
+                {
+                    user_id:"用户id",
+                    avatar:"头像",
+                    date:"评论日期",
+                    content:"内容"
+                }
+            ]
+        }
+
+喵喵拍砖页
+    资源定位：
+        getProductionListHall
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            list:[
+                {
+                    product_id:"作品id"
+                    user_id:"用户id"
+                    product_pic:"作品图片",
+                    vote_num:"投票数"
+                }
+            ],
+            pagination: {
+                page: "当前页码",
+                limit: "每页数据量",
+                total: "总页数"
+            }
+        }
+
+活动页
+    资源定位：
+        getActivityList
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            list:[
+                {
+                    name:"活动名称",
+                    id:"活动id",
+                    image:"活动图片"
+                }
+            ],
+            pagination: {
+                page: "当前页码",
+                limit: "每页数据量",
+                total: "总页数"
+            }
+        }
+
+学堂
+    资源定位：
+        getArticalList
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            list:[
+                {
+                    artical_name:"文章名称",
+                    author:"作者",
+                    date:"发布时间",
+                    id:"文章id",
+                    content:"文章内容",
+                    upvote_num:"赞成数",
+                    review_num:"评论数"
+                }
+            ]
+        }
+
+学堂详情
+    资源定位：
+        getArticalDetail
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            artical_name:"文章名称",
+            author:"作者",
+            date:"发布时间",
+            id:"文章id",
+            content:"文章内容",
+            upvote_num:"赞成数",
+            review_num:"评论数",
+            review_list:[
+                {
+                    review_id:"评论id"
+                    user_id:"用户id",
+                    avatar:"头像",
+                    date:"评论日期",
+                    content:"内容",
+                    upvote:"点赞数",
+                    reply_num:"回复数"
+                }
+            ]
+        }
+
+评论详情
+    资源定位：
+        getReviewDetail
+    交互方式：
+        get
+    请求参数：
+        {
+            review_id:"评论id"
+        }
+    返回参数：
+        {
+            review_id:"评论id"
+            user_id:"用户id",
+            avatar:"头像",
+            date:"评论日期",
+            content:"内容",
+            upvote:"点赞数",
+            replyList:[
+                {
+
+                }
+            ]           
+        }
+
+问答
+    资源定位：
+        getQAList
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            list:[
+                {
+                    artical_name:"文章名称",
+                    author:"作者",
+                    date:"发布时间",
+                    id:"文章id",
+                    content:"文章内容",
+                    upvote_num:"赞成数",
+                    review_num:"评论数"
+                }
+            ]
+        }
+
+问答详情
+    资源定位：
+        getArticalDetail
+    交互方式：
+        get
+    请求参数：
+        null
+    返回参数：
+        {
+            artical_name:"文章名称",
+            author:"作者",
+            date:"发布时间",
+            id:"文章id",
+            content:"文章内容",
+            upvote_num:"赞成数",
+            review_num:"评论数",
+            upvote_list:[
+                {
+                    user_name:"dianzan用户姓名",
+                    avatar:"头像", 
+                    authenticating_state:"认证状态"  
+                }
+            ],
+            review_list:[
+                {
+                    review_id:"评论id"
+                    user_id:"用户id",
+                    avatar:"头像",
+                    date:"评论日期",
+                    content:"内容",
+                    upvote:"点赞数",
+                    reply_num:"回复数"
+                }
+            ]
+        }
+
+发布问题
+    资源定位：
+        releaseAnQuestion
+    交互方式：
+        post
+    请求参数：
+        {
+            user_id:"用户id",
+            title："问题标题",
+            content:"问题内容",
+            images:"问题图片",
+        }
+    返回参数：
+        {
+            code:"状态值", 
+            msg:"返回消息"
+        }
+
+
+
+
+
