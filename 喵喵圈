@@ -119,7 +119,8 @@
                     product_id:"作品id"
                     user_id:"用户id"
                     product_pic:"作品图片",
-                    vote_num:"投票数"
+                    vote_num:"投票数",
+                    views_num:"浏览数"
                 }
             ],
             pagination: {
@@ -335,9 +336,9 @@
             }
         }
 
-喵喵人才
+喵喵人才详情
     资源定位：
-        getJobHunterList
+        getJobHunterDetail
     交互方式：
         get
     请求参数：
